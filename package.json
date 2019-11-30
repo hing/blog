@@ -1,0 +1,49 @@
+{
+  "name": "hing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server",
+    "dev": "hexo s",
+    "yqsync": "yuque-hexo sync",
+    "yqclean": "yuque-hexo clean",
+    "yqbuild": "npm run yqsync && npm run build",
+    "yqdeploy": "npm run yqsync && npm run deploy",
+    "yqpublish": "npm run yqclean && npm run yqbuild",
+    "yqreset": "npm run yqclean && npm run yqsync"
+  },
+  "hexo": {
+    "version": "4.0.0"
+  },
+  "dependencies": {
+    "hexo": "^4.0.0",
+    "hexo-deployer-git": "0.0.4",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-index": "^1.0.0",
+    "hexo-generator-json-content": "^3.0.1",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^2.0.0",
+    "hexo-renderer-sass": "^0.4.0",
+    "hexo-renderer-stylus": "^1.1.0",
+    "hexo-server": "^1.0.0"
+  },
+  "yuqueConfig": {
+    "postPath": "source/_posts",
+    "cachePath": "yuque.json",
+    "mdNameFormat": "slug",
+    "adapter": "hexo",
+    "concurrency": 5,
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "hing",
+    "repo": "blog",
+    "onlyPublished": true
+  },
+  "devDependencies": {
+    "yuque-hexo": "^1.6.0"
+  }
+}
