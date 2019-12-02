@@ -3,17 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
     "server": "hexo server",
-    "dev": "hexo s",
-    "yqsync": "yuque-hexo sync",
-    "yqclean": "yuque-hexo clean",
-    "yqbuild": "npm run yqsync && npm run build",
-    "yqdeploy": "npm run yqsync && npm run deploy",
-    "yqpublish": "npm run yqclean && npm run yqbuild",
-    "yqreset": "npm run yqclean && npm run yqsync"
+    "sync": "yuque-hexo sync",
+    "clean": "yuque-hexo clean && hexo clean",
+    "deploy": "npm run sync && hexo g -d",
+    "reset": "npm run clean && npm run sync"
   },
   "hexo": {
     "version": "4.0.0"
